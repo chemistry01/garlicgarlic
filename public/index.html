@@ -1,3 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-Hello World
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안전확인대상생활화학제품 확인신청서</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group, .radio-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
+<body>
+    <form>
+        <h1>안전확인대상생활화학제품 확인신청서</h1>
+        <label for="접수번호">접수번호</label>
+        <input type="text" id="접수번호" name="접수번호" placeholder="접수번호 입력">
+
+        <label for="신청인-상호">신청인 상호(명칭)</label>
+        <input type="text" id="신청인-상호" name="신청인-상호" placeholder="상호 입력">
+
+        <label for="법인등록번호">법인등록번호(사업자등록번호)</label>
+        <input type="text" id="법인등록번호" name="법인등록번호" placeholder="등록번호 입력">
+
+        <label for="대표자성명">성명(대표자)</label>
+        <input type="text" id="대표자성명" name="대표자성명" placeholder="대표자 성명 입력">
+
+        <label for="담당자">담당자 성명 및 연락처</label>
+        <input type="text" id="담당자" name="담당자" placeholder="담당자 성명 입력">
+        <input type="email" id="담당자-이메일" name="담당자-이메일" placeholder="이메일 입력">
+
+        <label for="소재지">소재지(사업장)</label>
+        <textarea id="소재지" name="소재지" rows="3" placeholder="소재지 입력"></textarea>
+
+        <label for="제조방식">제조방식</label>
+        <div class="radio-group">
+            <label><input type="radio" name="제조방식" value="OEM"> 주문자 상표부착 제조 (OEM)</label>
+            <label><input type="radio" name="제조방식" value="ODM"> 주문자 개발 제조 (ODM)</label>
+            <label><input type="radio" name="제조방식" value="기타"> 기타</label>
+        </div>
+
+        <label for="제품명">제품명</label>
+        <input type="text" id="제품명" name="제품명" placeholder="제품명 입력">
+
+        <label for="용도">용도</label>
+        <textarea id="용도" name="용도" rows="3" placeholder="제품의 용도 입력"></textarea>
+
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>
